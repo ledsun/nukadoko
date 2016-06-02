@@ -1,0 +1,30 @@
+{
+  "name": "test",
+  "description": "Rotate test cases in markdown.",
+  "version": "0.0.1",
+  "author": "shigeru.nakajima@gmail.com",
+  "bugs": {
+    "url": "https://github.com/ledsun/furiosa/nukadoko"
+  },
+  "dependencies": {
+    "denodeify": "^1.2.1",
+    "remark": "^4.2.2",
+    "unist-util-filter": "^0.2.1",
+    "unist-util-find-all-after": "^1.0.0",
+    "unist-util-find-all-before": "^1.0.0",
+    "unist-util-remove": "^0.2.1"
+  },
+  "homepage": "https://github.com/ledsun/nukadoko",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "private": "true",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ledsun/nukadoko.git"
+  },
+  "scripts": {
+    "adopt": "mv new_userAcceptanceTest.md ../textae.wiki/userAcceptanceTest.md && mv new_unusualUserAcceptanceTest.md ../textae.wiki/unusualUserAcceptanceTest.md",
+    "start": "node . ../textae.wiki/userAcceptanceTest.md ../textae.wiki/unusualUserAcceptanceTest.md > new_userAcceptanceTest.md && node . ../textae.wiki/unusualUserAcceptanceTest.md  ../textae.wiki/userAcceptanceTest.md > new_unusualUserAcceptanceTest.md"
+  }
+}
